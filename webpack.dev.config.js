@@ -1,14 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const HtmlWebpackReloadPlugin = require('html-webpack-reload-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-	entry: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
-			'./src/index.js'
-	],
+	entry: {
+		main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/app/entry-app-index.js']
+	},
 	output: {
-		path: path.join(__dirname, 'dist'),
+		path: path.join(__dirname, 'dist/app'),
 		publicPath: '/',
 		filename: '[name].js'
 	},
@@ -46,11 +47,40 @@ module.exports = {
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoEmitOnErrorsPlugin(),
+		new webpack.NamedModulesPlugin(),
 		new HtmlWebPackPlugin({
-			template: "./src/html/index.html",
+			template: "./src/app/html/index.html",
 			filename: "./index.html",
 			excludeChunks: [ 'server' ]
 		}),
-		//new HtmlWebpackReloadPlugin()
+		new BrowserSyncPlugin(
+			// BrowserSync options
+			{
+				// browse to http://localhost:3000/ during development
+				host: 'localhost',
+				port: 3000,
+				// proxy the Webpack Dev Server endpoint
+				// (which should be serving on http://localhost:3100/)
+				// through BrowserSync
+				proxy: 'http://localhost:8080/',
+				files: [{
+					match: [
+						'**/**/*.html'
+					],
+					fn: function(event, file) {
+						if (event === "change") {
+							const bs = require('browser-sync').get('bs-webpack-plugin');
+							bs.reload();
+						}
+					}
+				}]
+			},
+			// plugin options
+			{
+				// prevent BrowserSync from reloading the page
+				// and let Webpack Dev Server take care of this
+				reload: false
+			}
+		)
 	]
 };

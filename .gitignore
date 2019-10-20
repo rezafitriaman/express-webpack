@@ -128,4 +128,6 @@ webpack-cli.cmd
 webpack.cmd
 which
 which.cmd
-
+browser-sync
+browser-sync.cmd
+netstat
