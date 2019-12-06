@@ -1,0 +1,135 @@
+@import "custom";
+//@import "~bootstrap/scss/bootstrap";
+
+%box-shared {
+    position: relative;
+    display: block;
+    background-color: $box-example-color;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+nav {
+    background-color: white;
+}
+
+.custom-body {
+    //background-color: $body-color;
+
+    .empty {
+        display: none;
+    }
+
+    .bg-nav-custom {
+        background-color: $nav-color;
+    }
+
+    .content {
+        .vh-screen {
+            height: 100vh;
+            .data {
+                font-family: 'Roboto', sans-serif;
+                left: 0;
+                list-style-type: none;
+                padding-left: 0;
+                z-index: 1;
+                color: $customer-color;
+                .customer {
+                    font-style: italic;
+                }
+                .title {
+                    h5 {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .thick {
+            border: 0;
+            height: 5px;
+            margin: 4rem 0;
+            border-radius: 5px;
+            background-image: -webkit-gradient(linear,left top,right top,from($thick-color),to($background-color-transparent));
+            background-image: linear-gradient(to right, $thick-color, $background-color-transparent);
+        }
+
+        .content-300x250 {
+            width: 300px;
+            height: 250px;
+            @extend %box-shared;
+        }
+
+        .content-250x250 {
+            width: 250px;
+            height: 250px;
+            @extend %box-shared;
+        }
+
+        .content-320x240 {
+            width: 320px;
+            height: 240px;
+            @extend %box-shared;
+        }
+
+        .content-336x280 {
+            width: 336px;
+            height: 280px;
+            @extend %box-shared;
+        }
+
+        .content-120x600 {
+            width: 120px;
+            height: 600px;
+            @extend %box-shared;
+        }
+
+        .content-160x600 {
+            width: 160px;
+            height: 600px;
+            @extend %box-shared;
+        }
+
+        .content-728x90 {
+            width: 728px;
+            height: 90px;
+            @extend %box-shared;
+        }
+
+        .content-970x250 {
+            width: 970px;
+            height: 250px;
+            @extend %box-shared;
+
+            position: relative;
+            left: 25px;
+        }
+
+        .content-300x600 {
+            width: 300px;
+            height: 600px;
+            @extend %box-shared;
+        }
+
+        .content-320x480 {
+            width: 320px;
+            height: 480px;
+            @extend %box-shared;
+        }
+
+        .content-320x50 {
+            width: 320px;
+            height: 50px;
+            @extend %box-shared;
+        }
+
+        .content-320x100 {
+            width: 320px;
+            height: 100px;
+            @extend %box-shared;
+        }
+    }
+}

@@ -131,3 +131,13 @@ which.cmd
 browser-sync
 browser-sync.cmd
 netstat
+autoprefixer
+autoprefixer.cmd
+eslint
+eslint.cmd
+jest
+jest.cmd
+node-sass
+node-sass.cmd
+
+

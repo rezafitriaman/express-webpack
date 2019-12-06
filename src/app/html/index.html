@@ -1,18 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--suppress HtmlUnknownTarget, JSUnresolvedLibraryURL -->
+<html lang="en" class="no-js">
 <head>
+	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<title>Express an  Webpack App</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 	<link rel="shortcut icon" href="#">
-</head>
-<body>
-<h1>Master??</h1>
-<p class="description">Expressad  bpackApp</p>
-<button>sdf</button>
-<div class="awful-selfie"></div>
+	<title><%= htmlWebpackPlugin.options.title %></title>
 
-<span class="lines"></span>
-<span class="linesq"></span>
+	<meta name="description" content="banner" />
+	<meta name="keywords" content="banner" />
+	<meta name="author" content="bGenius" />
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<!--<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="normalize.css" />-->
+
+	<!-- TODO ADD LEAD AND SKY STYLES  -->
+	<!--<link rel="stylesheet" type="text/css" href="rectStyle.css" />-->
+
+	<!-- TODO ADD ENABLE FOR DOUBLECLICK -->
+	<!--<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>-->
+
+	<!--ENABLE FOR ADDFORM-->
+	<!--<script>document.write('<script src="'+ (window.API_URL || 'https://s1.adform.net/banners/scripts/rmb/Adform.DHTML.js?bv='+ Math.random()) +'"><\/script>');</script>
+	<script src="https://s1.adform.net/banners/scripts/components/Adform.DynAdsHelper.js"></script>-->
+
+</head>
+<body class="custom-body">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-nav-custom">
+
+	<a class="navbar-brand" href="#">DCOBuildT0ool</a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item dropdown empty rect">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkrect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rectangle</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item empty s300x250" href="#size-300x250">300x250</a>
+					<a class="dropdown-item empty s250x250" href="#size-250x250">250x250</a>
+					<a class="dropdown-item empty s320x240" href="#size-320x240">320x240</a>
+					<a class="dropdown-item empty s336x280" href="#size-336x280">336x280</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown empty sky">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinksky" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Skyscraper</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item empty s120x600" href="#size-120x600">120x600</a>
+					<a class="dropdown-item empty s160x600" href="#size-160x600">160x600</a>
+					<a class="dropdown-item empty s300x600" href="#size-300x600">300x600</a>
+					<a class="dropdown-item empty s320x480" href="#size-320x480">320x480</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown empty leadb">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkleadb" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Leaderboard</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item empty s728x90" href="#size-728x90">728x90</a>
+					<a class="dropdown-item empty s320x50" href="#size-320x50">320x50</a>
+					<a class="dropdown-item empty s320x100" href="#size-320x100">320x100</a>
+					<a class="dropdown-item empty s970x250" href="#size-970x250">970x250</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<section class="content">
+	<div class="container rect empty" id="size-300x250">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>300x250</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-300x250 -->
+							<iframe src="../../banners/rect/html/300x250.html"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container rect empty" id="size-250x250">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>250x250</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-250x250 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container rect empty" id="size-320x240">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>320x240</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-320x240 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container rect empty" id="size-336x280">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>336x280</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-336x280 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- -------------------------------------sky---------------------------------- -->
+
+<section class="content">
+	<div class="container empty">
+		<div class="row">
+			<div class="col-sm">
+				<hr class="thick">
+			</div>
+		</div>
+	</div>
+	<div class="container sky empty" id="size-120x600">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>120x600</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-120x600 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container sky empty" id="size-160x600">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>160x600</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-160x600 -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container sky empty" id="size-300x600">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>300x600</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-300x600 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container sky empty" id="size-320x480">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>320x480</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-320x480 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- -------------------------------------leadb---------------------------------- -->
+
+<section class="content">
+	<div class="container empty">
+		<div class="row">
+			<div class="col-sm">
+				<hr class="thick">
+			</div>
+		</div>
+	</div>
+	<div class="container leadb empty" id="size-728x90">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li id="customer" class="customer"></li>
+							<li class="title"><h5>728x90</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-728x90 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container leadb empty" id="size-320x50">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>320x50</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-320x50 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container leadb empty" id="size-320x100">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>320x100</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-320x100 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container leadb empty" id="size-970x250">
+		<div class="row">
+			<div class="col-sm">
+				<div class="wrapper">
+					<div class="d-flex justify-content-center align-items-center vh-screen position-relative">
+						<ul class="data position-absolute">
+							<li class="customer"></li>
+							<li class="title"><h5>970x250</h5></li>
+						</ul>
+						<div class="main">
+							<!-- banner-970x250 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--<script src="TweenMax.min.js"></script>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
+<script src="bundle.js"></script>-->
 
 </body>
 </html>

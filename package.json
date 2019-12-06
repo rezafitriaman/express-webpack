@@ -1,13 +1,20 @@
 {
   "name": "express-webpack",
   "version": "1.0.0",
-  "description": "combine express with webpack",
+  "description": "combine exeslint-plugin-reactpress with webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "coverage": "jest --coverage",
     "start": "node ./dist/server.js",
     "buildDev": "webpack --mode development --config webpack.server.config.js && webpack --config webpack.dev.config.js",
     "buildProd": "webpack --mode production --config webpack.server.config.js && webpack --config webpack.prod.config.js"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -21,7 +28,11 @@
   },
   "homepage": "https://github.com/rezafitriaman/express-webpack#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "bootstrap" : "^4.3.1",
+    "jquery" : "^3.4.1",
+    "popper.js" : "^1.16.0"
+
   },
   "devDependencies": {
     "webpack-cli": "^3.3.9",
@@ -44,6 +55,14 @@
     "webpack-dev-middleware":"^3.7.2",
     "webpack-hot-middleware":"^2.25.0",
     "browser-sync-webpack-plugin":"^2.2.2",
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "sass-loader":"^8.0.0",
+    "node-sass": "^4.12.0",
+    "autoprefixer": "^9.6.5",
+    "eslint-loader":"^3.0.2",
+    "babel-eslint":"^10.0.3",
+    "eslint" : "^6.6.0",
+    "eslint-plugin-react":"^7.16.0",
+    "webpack-shell-plugin":"^0.5.0"
   }
 }
